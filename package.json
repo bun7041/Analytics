@@ -1,0 +1,82 @@
+{
+  "name": "angulartics2",
+  "description": "Vendor-agnostic web analytics for Angular2 applications",
+  "homepage": "https://angulartics.github.io/angulartics2/",
+  "author": "João Ribeiro <jonnybgod@gmail.com> (http://github.com/JonnyBGod)",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "prebuild": "rimraf dist",
+    "build": "ts-node -O '{\"module\": \"commonjs\"}' build.ts",
+    "test": "ng test --watch=false --browsers=ChromeCI",
+    "test:ci": "ng test --code-coverage --watch=false --no-progress --browsers=ChromeCI",
+    "test:watch": "ng test",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "presemantic-release": "cp -R .git dist/packages-dist",
+    "semantic-release": "cd dist/packages-dist && semantic-release",
+    "ghpages": "ng build --prod --no-progress --baseHref='/angulartics2/'"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "10.0.3",
+    "@angular/cdk": "10.0.1",
+    "@angular/common": "10.0.3",
+    "@angular/compiler": "10.0.3",
+    "@angular/core": "10.0.3",
+    "@angular/forms": "10.0.3",
+    "@angular/localize": "10.0.3",
+    "@angular/material": "10.0.1",
+    "@angular/platform-browser": "10.0.3",
+    "@angular/platform-browser-dynamic": "10.0.3",
+    "@angular/router": "10.0.3",
+    "@ng-bootstrap/ng-bootstrap": "7.0.0",
+    "@uirouter/angular": "6.0.3",
+    "@uirouter/core": "6.0.5",
+    "@uirouter/rx": "0.6.5",
+    "bootstrap": "4.5.0",
+    "core-js": "3.6.5",
+    "rxjs": "6.6.0",
+    "tslib": "2.0.0",
+    "zone.js": "0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.1000.2",
+    "@angular/cli": "10.0.2",
+    "@angular/compiler-cli": "10.0.3",
+    "@angular/language-service": "10.0.3",
+    "@types/applicationinsights-js": "1.0.9",
+    "@types/facebook-pixel": "0.0.20",
+    "@types/fs-extra": "9.0.1",
+    "@types/google.analytics": "0.0.40",
+    "@types/jasmine": "3.5.11",
+    "@types/node": "14.0.22",
+    "@types/segment-analytics": "0.0.32",
+    "codelyzer": "6.0.0",
+    "del": "5.1.0",
+    "fs-extra": "9.0.1",
+    "jasmine-core": "3.5.0",
+    "karma": "5.1.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-cli": "2.0.0",
+    "karma-coverage-istanbul-reporter": "3.0.3",
+    "karma-jasmine": "3.3.1",
+    "karma-jasmine-html-reporter": "1.5.4",
+    "ng-packagr": "10.0.1",
+    "semantic-release": "17.1.1",
+    "ts-node": "8.10.2",
+    "tslint": "6.1.2",
+    "typescript": "3.9.6"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/angulartics/angulartics2/issues"
+  },
+  "repository": "angulartics/angulartics2",
+  "engines": {
+    "node": ">=8"
+  }
+}
